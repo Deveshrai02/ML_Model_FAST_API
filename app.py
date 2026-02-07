@@ -81,36 +81,9 @@ def predict_premium(data: UserInput):
         'occupation': data.occupation
     }])
 
-    # make prediction
     prediction = model.predict(input_df)[0]
 
-    # try to get probabilities/confidence if available
-    class_probabilities = None
-    confidence = None
-    try:
-        proba = model.predict_proba(input_df)
-        # assuming single row
-        probs = proba[0]
-        # map class->prob if classes_ exists
-        if hasattr(model, 'classes_'):
-            class_probabilities = {str(c): float(p) for c, p in zip(model.classes_, probs)}
-        else:
-            # fallback to indexed probabilities
-            class_probabilities = {str(i): float(p) for i, p in enumerate(probs)}
-        confidence = float(max(probs))
-    except Exception:
-        # model may not support predict_proba
-        class_probabilities = {}
-        confidence = None
-
-    response_payload = {
-        'predicted_category': str(prediction),
-        'confidence': confidence,
-        'class_probabilities': class_probabilities
-    }
-
-    # return under key 'response' to match frontend expectations
-    return JSONResponse(status_code=200, content={'response': response_payload})
+    return JSONResponse(status_code=200, content={'predicted_category': prediction})
 
 
 

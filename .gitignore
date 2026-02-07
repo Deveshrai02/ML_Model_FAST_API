@@ -1,0 +1,38 @@
+# Virtual environments
+myenv/
+.venv/
+env/
+venv/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+
+# Logs
+pip-log.txt
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dylib
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local env files
+.env
+
+# Pytest cache
+.pytest_cache/

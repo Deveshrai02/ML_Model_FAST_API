@@ -1,0 +1,5 @@
+{
+  "python.defaultInterpreterPath": "/Users/dm/Developer/fast-api-ML_Model_1/myenv/bin/python",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.testing.pytestEnabled": false
+}

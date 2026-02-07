@@ -1,0 +1,8 @@
+INFO:     Will watch for changes in these directories: ['/Users/dm/Developer/fast-api-ML_Model_1']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [47591] using StatReload
+INFO:     Started server process [47637]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:51838 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51842 - "POST /predict HTTP/1.1" 200 OK
